@@ -1,0 +1,4 @@
+services:
+#    ps_science_platform.example:
+#        class: PS\SciencePlatformBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
