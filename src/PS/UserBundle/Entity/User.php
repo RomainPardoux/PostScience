@@ -1,159 +1,80 @@
 <?php
+// src/PS/UserBundle/Entity/User.php
 
 namespace PS\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
 
 /**
- * User
- *
- * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="PS\UserBundle\Repository\UserRepository")
- */
-class User
+* @ORM\Table(name="ps_user")
+* @ORM\Entity(repositoryClass="PS\UserBundle\Repository\UserRepository")
+*/
+class User extends BaseUser
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
+	/**
+	* @ORM\Column(name="id", type="integer")
+	* @ORM\Id
+	* @ORM\GeneratedValue(strategy="AUTO")
+	*/
+	protected $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="username", type="string", length=255, nullable=true, unique=true)
-     */
-    private $username;
+	/**
+	* @ORM\Column(name="pseudo", length=255, type="string")
+	*/
+	protected $pseudo;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255)
-     */
-    private $password;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="salt", type="string", length=255)
-     */
-    private $salt;
-
-    /**
-     * @var array
-     *
-     * @ORM\Column(name="roles", type="array")
-     */
-    private $roles;
+	/**
+	* @ORM\Column(name="phone_number", length=255, type="string")
+	*/
+	protected $phone_number;
 
 
     /**
-     * Get id
+     * Set pseudo
      *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set username
-     *
-     * @param string $username
+     * @param string $pseudo
      *
      * @return User
      */
-    public function setUsername($username)
+    public function setPseudo($pseudo)
     {
-        $this->username = $username;
+        $this->pseudo = $pseudo;
 
         return $this;
     }
 
     /**
-     * Get username
+     * Get pseudo
      *
      * @return string
      */
-    public function getUsername()
+    public function getPseudo()
     {
-        return $this->username;
+        return $this->pseudo;
     }
 
     /**
-     * Set password
+     * Set phoneNumber
      *
-     * @param string $password
+     * @param string $phoneNumber
      *
      * @return User
      */
-    public function setPassword($password)
+    public function setPhoneNumber($phoneNumber)
     {
-        $this->password = $password;
+        $this->phone_number = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Get password
+     * Get phoneNumber
      *
      * @return string
      */
-    public function getPassword()
+    public function getPhoneNumber()
     {
-        return $this->password;
-    }
-
-    /**
-     * Set salt
-     *
-     * @param string $salt
-     *
-     * @return User
-     */
-    public function setSalt($salt)
-    {
-        $this->salt = $salt;
-
-        return $this;
-    }
-
-    /**
-     * Get salt
-     *
-     * @return string
-     */
-    public function getSalt()
-    {
-        return $this->salt;
-    }
-
-    /**
-     * Set roles
-     *
-     * @param array $roles
-     *
-     * @return User
-     */
-    public function setRoles($roles)
-    {
-        $this->roles = $roles;
-
-        return $this;
-    }
-
-    /**
-     * Get roles
-     *
-     * @return array
-     */
-    public function getRoles()
-    {
-        return $this->roles;
+        return $this->phone_number;
     }
 }
-

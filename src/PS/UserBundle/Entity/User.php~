@@ -1,0 +1,32 @@
+<?php
+// src/PS/UserBundle/Entity/User.php
+
+namespace PS\UserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+
+/**
+ * @ORM\Table(name="ps_user")
+ * @ORM\Entity(repositoryClass="PS\UserBundle\Repository\UserRepository")
+ */
+class User extends BaseUser
+{
+  /**
+   * @ORM\Column(name="id", type="integer")
+   * @ORM\Id
+   * @ORM\GeneratedValue(strategy="AUTO")
+   */
+  protected $id;
+
+  /**
+   * @ORM\Column(name="pseudo", length=255, type="string")
+   */
+  protected $pseudo;
+
+  /**
+   * @ORM\Column(name="phone_number", length=255, type="string")
+   */
+  protected $phone_number;
+
+}

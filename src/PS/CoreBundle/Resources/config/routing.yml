@@ -1,0 +1,11 @@
+# src/PS/CoreBundle/Resources/config/routing.yml
+
+ps_core_home:
+    path: /
+    defaults:
+        _controller: PSCoreBundle:Core:index
+
+ps_core_contact:
+    path: /contact
+    defaults:
+        _controller: PSCoreBundle:Core:contact
