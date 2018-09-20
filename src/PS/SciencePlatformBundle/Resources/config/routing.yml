@@ -1,3 +1,0 @@
-ps_science_platform_homepage:
-    path:     /
-    defaults: { _controller: PSSciencePlatformBundle:Default:index }

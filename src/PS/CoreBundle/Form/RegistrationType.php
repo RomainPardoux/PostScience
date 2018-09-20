@@ -1,7 +1,7 @@
 <?php
-// src/PS/UserBundle/Form/RegistrationType.php
+// src/PS/CoreBundle/Form/RegistrationType.php
 
-namespace PS\UserBundle\Form;
+namespace PS\CoreBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

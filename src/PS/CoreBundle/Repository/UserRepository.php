@@ -1,6 +1,6 @@
 <?php
 
-namespace PS\UserBundle\Repository;
+namespace PS\CoreBundle\Repository;
 
 /**
  * UserRepository

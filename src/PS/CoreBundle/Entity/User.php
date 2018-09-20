@@ -1,14 +1,14 @@
 <?php
 // src/PS/UserBundle/Entity/User.php
 
-namespace PS\UserBundle\Entity;
+namespace PS\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 
 /**
 * @ORM\Table(name="ps_user")
-* @ORM\Entity(repositoryClass="PS\UserBundle\Repository\UserRepository")
+* @ORM\Entity(repositoryClass="PS\CoreBundle\Repository\UserRepository")
 */
 class User extends BaseUser
 {
